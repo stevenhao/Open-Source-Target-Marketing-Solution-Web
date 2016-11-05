@@ -5,7 +5,7 @@
 Run:
 ```
 npm install
-gulp watch
+gulp
 npm start
 ```
 
