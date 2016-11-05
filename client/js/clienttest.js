@@ -6,9 +6,9 @@ var client = new rpc.Client({
   host: 'localhost',
   path: '/server',
   strict: false});
-params1 = [1, 2, 'akshat', {69: 70, 'steven': ['k', 'plus']}];
+params1 = ['test'];
 console.log('params: ', params1);
-client.call({'method': 'scott', 'params': params1},
+client.call({'method': 'cnt', 'params': params1},
   function(err, res) {
     console.log(err, res);
     var error = res.error;
