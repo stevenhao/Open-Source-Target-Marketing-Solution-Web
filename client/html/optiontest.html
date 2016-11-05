@@ -1,0 +1,131 @@
+<link rel="stylesheet" href="./css/optiontest.css" />
+
+<div class="top-guy lichess_overboard game_config game_config_hook " data-random-color-variants="5,6,9,7,8">
+  <a href="/" class="close icon" title="Cancel" data-icon="L"></a>
+  <h2>Create a game</h2>
+
+<div class="variant label_select">
+  <label for="variant">Variant</label>
+<select id="variant" name="variant">
+  <option value="1" class="variant_1" title="Standard rules of chess (FIDE)" selected="selected">Standard</option>
+  <option value="2" class="variant_2" title="Standard rules of chess (FIDE)">King of the hill</option>
+</select>
+
+</div>
+
+
+
+<div class="mode_choice buttons">
+  
+  
+
+<group class="radio">
+
+<div>
+  <input type="radio" id="mode_0" name="mode" value="0">
+  <label class="required" for="mode_0">Casual</label>
+</div>
+
+<div>
+  <input type="radio" id="mode_1" name="mode" value="1" checked="">
+  <label class="required" for="mode_1">Rated</label>
+</div>
+
+</group>
+
+  
+</div>
+<div class="range_and_members optional_config">
+  
+  <div class="members_only" style="display: none;">
+    <label class="required pointer" for="membersOnly">Members only</label>
+    
+
+<input type="checkbox" id="membersOnly" name="membersOnly" value="true">
+
+  </div>
+  
+  <div class="rating_range_config slider">
+    Rating range: <span class="range">1900 - 2900</span>
+    <div class="rating_range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+      
+
+<input id="ratingRange" name="ratingRange" value="1900-2900" type="hidden" data-min="800" data-max="2900">
+
+    <div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 52.381%; width: 47.619%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 52.381%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span></div>
+  </div>
+</div>
+
+
+  <div class="color_submits">
+    
+    <button data-hint="Black" type="submit" class="button hint--bottom black" name="color" value="black">
+      <i></i>
+    </button>
+    
+    <button data-hint="Random side" type="submit" class="button hint--bottom random" name="color" value="random">
+      <i></i>
+    </button>
+    
+    <button data-hint="White" type="submit" class="button hint--bottom white" name="color" value="white">
+      <i></i>
+    </button>
+    
+  </div>
+  
+
+  
+  
+  <div class="ratings">
+    
+    <div class="bullet" style="display: block;">
+      Rating: <strong data-icon="T">2079</strong> Bullet
+    </div>
+    
+    <div class="blitz" style="display: none;">
+      Rating: <strong data-icon=")">2017</strong> Blitz
+    </div>
+    
+    <div class="classical" style="display: none;">
+      Rating: <strong data-icon="+">2220</strong> Classical
+    </div>
+    
+    <div class="correspondence" style="display: none;">
+      Rating: <strong data-icon=";">1264</strong> Correspondence
+    </div>
+    
+    <div class="crazyhouse" style="display: none;">
+      Rating: <strong data-icon="">2029</strong> Crazyhouse
+    </div>
+    
+    <div class="chess960" style="display: none;">
+      Rating: <strong data-icon="'">1625</strong> Chess960
+    </div>
+    
+    <div class="kingOfTheHill" style="display: none;">
+      Rating: <strong data-icon="(">2090</strong> King of the Hill
+    </div>
+    
+    <div class="threeCheck" style="display: none;">
+      Rating: <strong data-icon=".">2013</strong> Three-check
+    </div>
+    
+    <div class="antichess" style="display: none;">
+      Rating: <strong data-icon="@">1500</strong> Antichess
+    </div>
+    
+    <div class="atomic" style="display: none;">
+      Rating: <strong data-icon=">">1755</strong> Atomic
+    </div>
+    
+    <div class="horde" style="display: none;">
+      Rating: <strong data-icon="_">1402</strong> Horde
+    </div>
+    
+    <div class="racingKings" style="display: none;">
+      Rating: <strong data-icon="">1500</strong> Racing Kings
+    </div>
+    
+  </div>
+  
+</div>

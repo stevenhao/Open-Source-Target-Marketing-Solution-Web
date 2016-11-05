@@ -20,10 +20,6 @@ gulp.task('copyhtml', function () {
 // unused for now
 gulp.task('less', function () {
   var l = less();
-  l.on('error', function(err) {
-    gutil.log(err);
-    b.end();
-  });
   return gulp.src('client/less/*.less')
     .pipe(l)
     .pipe(gulp.dest('./public/css'));

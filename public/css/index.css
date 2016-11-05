@@ -2,3 +2,42 @@
   width: 100%;
   height: 100%;
 }
+.options {
+  display: flex;
+  flex-direction: column;
+  font: 20px 'Noto Sans', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, Sans-Serif;
+}
+.options h2 {
+  width: 144px;
+  text-align: right;
+}
+.options .category {
+  background: #DDD;
+  display: flex;
+}
+.options .category label {
+  display: block;
+  width: 144px;
+  text-align: right;
+}
+.options .category select {
+  margin-left: 10px;
+  font-weight: bold;
+  padding: 5px 8px;
+}
+.options .category select option {
+  font-weight: normal;
+}
+.options .demographics {
+  background: #EEE;
+  display: flex;
+  flex-direction: column;
+}
+.options .demographics .demographic {
+  display: flex;
+}
+.options .demographics .demographic label {
+  display: block;
+  width: 144px;
+  text-align: right;
+}
