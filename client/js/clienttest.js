@@ -6,8 +6,6 @@ var client = new rpc.Client({
   host: 'localhost',
   path: '/server',
   strict: false});
-params1 = ['test'];
-console.log('params: ', params1);
 
 client.run = function(method, params) {
   client.call({'method': method, 'params': params},
@@ -24,4 +22,18 @@ client.run = function(method, params) {
   );
 };
 
+params1 = ['test']
+console.log('params: ', params1);
 client.run('cnt', params1)
+
+params1 = ['test', ['test', 'test']]
+console.log('params: ', params1);
+client.run('set_address', params1)
+
+params1 = []
+console.log('params: ', params1);
+client.run('get_businesses', params1)
+
+params1 = [{test: 2}]
+console.log('params: ', params1);
+client.run('get_scores', params1)
