@@ -5,7 +5,7 @@ var OSM = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png'
 var eps = 0.001
 
 var map;
-function drawHeatMap(locations) {
+function drawHeatMap(odd, locations) {
   function onMount(el) {
     if (map) {
       map.off();
@@ -34,25 +34,25 @@ function drawHeatMap(locations) {
       E = Math.max(E, loc['longitude'])
       W = Math.min(W, loc['longitude'])
       L.marker(L.latLng(loc['latitude'],loc['longitude'])).addTo(map);
-      return [loc['latitude'],loc['longitude'], loc['score']];
-    }));
+      return [loc['latitude'],loc['longitude'], loc['score']/7.];
+    }), {radius: 150});
     heatLayer.addTo(map);
 
     doBounds();
   }
 
-  var id = locations.join('');
   return m('.heatmap', {
     config: onMount,
-    key: id,
+    key: odd,
   });
 }
 
 
+var odd = 0;
 var HeatMap = {
   controller: function() {
-    var addr = m.prop('410 Memorial Drive, Cambridge, MA 02139');
-    var query = m.prop('Ethiopian');
+    var addr = m.prop('422 Delaware Ave, Wilmington, DE 19801');
+    var query = m.prop('sushi');
     var locations = m.prop([
         {'latitude': 50.45, 'longitude': 30.67, 'score': 500},
         {'latitude': 50.46, 'longitude': 30.66, 'score': 300},
@@ -72,8 +72,11 @@ var HeatMap = {
           var result = res.result;
 
           console.log('got result', result);
+          odd++;
+          odd %= 2;
           locations(result);
           m.endComputation();
+          m.redraw(true);
         })
       })
     };
@@ -94,8 +97,8 @@ var HeatMap = {
       }),
       m('button', {
         onclick: ctrl.updateLocations,
-      }, 'Refresh the shit'),
-      drawHeatMap(locations),
+      }, 'Refresh'),
+      drawHeatMap(odd, locations),
     ]);
   }
 };
