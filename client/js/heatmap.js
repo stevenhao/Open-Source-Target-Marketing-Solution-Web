@@ -9,21 +9,17 @@ var HeatMap = {
   },
   view: function(ctrl) {
     var map = ctrl.getMap();
-    return m('.heatmap', [
-      m('div', 'This is the heat map.'),
-      m('.map#map', m('div', {
+    return m('.heatmap', {
         config: function(el) {
           var map = L.map(el).setView([51.505, -0.09], 13);
-          L.tileLayer(OSM , {
+          L.tileLayer(MAPBOX , {
           }).addTo(map);
 
-
-          L.marker([51.5, -0.09]).addTo(map)
-            .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-            .openPopup();
           ctrl.setMap(map);
         }
-      }, 'This is the heat map container')),
+      }, [
+      m('div', 'This is the heat map.'),
+      m('.map#map', m('div', 'This is the heat map container')),
     ]);
   }
 };
