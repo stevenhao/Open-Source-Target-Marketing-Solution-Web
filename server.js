@@ -109,6 +109,36 @@ server.cnt = function(params, ERROR, RESULT) {
   });
 }
 
+server.set_address = function(params, ERROR, RESULT) {
+  logger.white('query', JSON.stringify(params));
+
+  var address = params[0];
+  var dest = params[1];
+  var query = {address: address, dest: dest};
+  py.call('set_address', query, function (result) {
+    RESULT(result);
+  });
+}
+
+server.get_businesses = function(params, ERROR, RESULT) {
+  logger.white('query', JSON.stringify(params));
+
+  var query = {};
+  py.call('get_businesses', query, function (result) {
+    RESULT(result);
+  });
+}
+
+server.get_scores = function(params, ERROR, RESULT) {
+  logger.white('query', JSON.stringify(params));
+
+  var str = params[0];
+  var query = {str: str};
+  py.call('get_scores', query, function (result) {
+    RESULT(result);
+  });
+}
+
 app.post('/server', function(req, res) {
   var Qname = req.body.method;
   var error = function(msg) {
