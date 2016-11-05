@@ -24,7 +24,7 @@ gulp.task('less', function () {
     gutil.log(err);
     b.end();
   });
-  return gulp.src('client/*.less')
+  return gulp.src('client/less/*.less')
     .pipe(l)
     .pipe(gulp.dest('./public/css'));
 });
@@ -36,4 +36,4 @@ paths = [
 gulp.task('watch', function() {
   gulp.watch(paths, ['default']);
 });
-gulp.task('default', ['browserify', 'copyhtml']);
+gulp.task('default', ['browserify', 'copyhtml', 'less']);
