@@ -60,6 +60,9 @@ var py = (function() {
       }
     });
   });
+  subp.stderr.on('data', (data) => {
+    logger.red (data)
+  });
 
   py.call = function(name, params, cbk) {
     ++qid;
