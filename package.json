@@ -1,0 +1,35 @@
+{
+  "name": "openbracket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s-wu/Open-Source-Target-Marketing-Solution.git"
+  },
+  "bugs": {
+    "url": "https://github.com/s-wu/Open-Source-Target-Marketing-Solution/issues"
+  },
+  "homepage": "https://github.com/s-wu/Open-Source-Target-Marketing-Solution#readme",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "express": "^4.14.0",
+    "node-json-rpc": "0.0.1"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat-js": "^0.1.0",
+    "gulp-less": "^3.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7",
+    "gutil": "^1.6.4",
+    "vinyl-transform": "^1.0.0"
+  }
+}
