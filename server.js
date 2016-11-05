@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 var py = (function() {
   var py = {};
   const spawn = require('child_process').spawn;
-  const subp = spawn('py/endpoint.py');
+  const subp = spawn('../endpoint.py');
 
   logger.blue ("yo")
   var cbks = {};
