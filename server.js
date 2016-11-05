@@ -132,8 +132,8 @@ server.get_businesses = function(params, ERROR, RESULT) {
 server.get_scores = function(params, ERROR, RESULT) {
   logger.white('query', JSON.stringify(params));
 
-  var str = params[0];
-  var query = {str: str};
+  var dict = params[0];
+  var query = {dict: dict};
   py.call('get_scores', query, function (result) {
     RESULT(result);
   });

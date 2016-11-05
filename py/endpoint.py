@@ -7,7 +7,8 @@ def cnt(s):
 
 #string, list of string
 def set_address(params):
-    pass
+    address = params["address"]
+    dest = params["dest"]
 
 #
 def get_businesses(params):
@@ -15,7 +16,7 @@ def get_businesses(params):
 
 #dict[str,int]
 def get_scores(params):
-    pass
+    d = params["dict"]
 
 #print "sup"
 
