@@ -8,3 +8,6 @@ npm install
 gulp watch
 npm start
 ```
+
+Test the client/server:
+Go to [localhost:6969/clienttest.html](localhost:6969/clienttest.html)
